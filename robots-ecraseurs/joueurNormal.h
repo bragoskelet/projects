@@ -3,10 +3,10 @@
 
 #include "joueur.h"
 
-class joueurNormal: public joueur //se déplace dans les 8 directions
+class joueurNormal: public joueur
 {
     public:
-        joueurNormal(int x=0, int y=0);
+        joueurNormal(int x, int y);
         virtual ~joueurNormal();
         virtual void deplace(terrain& terrain) override;
         virtual void affiche() const override;

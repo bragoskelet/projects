@@ -33,11 +33,11 @@ class terrain
     protected:
 
     private:
-        int d_largeur;
-        int d_hauteur;
+        int d_largeur; //nb colonnes, le x ou i
+        int d_hauteur; //nb lignes, le y ou j
         vector<vector<int>> d_grille;
-        //joueur* d_joueur;
-        //vector<robot*> d_robots;
+        joueur* d_joueur;
+        vector<robot*> d_robots;
 
 
 };

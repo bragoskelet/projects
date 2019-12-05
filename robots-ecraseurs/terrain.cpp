@@ -3,12 +3,12 @@
 using std::cout;
 using std::endl;
 
-terrain::terrain(int largeur, int hauteur): d_largeur{largeur}, d_hauteur{hauteur}, d_grille(d_hauteur)
+terrain::terrain(int largeur, int hauteur): d_largeur{largeur}, d_hauteur{hauteur}, d_grille(d_largeur), d_joueur{nullptr}, d_robots()
 {
-    for(int i=0; i<d_grille.size(); ++i)
+    for(int i=0; i<largeur; ++i)
     {
-        d_grille[i].resize(d_largeur);
-        for(int j=0; j<d_largeur; ++j) d_grille[i][j]=VIDE;
+        d_grille[i].resize(hauteur);
+        for(int j=0; j<hauteur; ++j) d_grille[i][j]=VIDE;
     }
 }
 
@@ -27,9 +27,9 @@ int terrain::largeur()
 
 void terrain::affiche() const
 {
-    for(int i=0; i<d_grille.size(); ++i)
+    for(int i=0; i<d_hauteur; ++i)
     {
-        for(int j=0; j<d_grille[i].size(); ++j) cout<<d_grille[i][j]<<" ";
+        for(int j=0; j<d_largeur; ++j) cout<<d_grille[j][i]<<" ";
         cout<<endl;
     }
 }

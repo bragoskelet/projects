@@ -6,8 +6,10 @@
 class joueurExpert: public joueur
 {
     public:
-        joueurExpert();
+        joueurExpert(int x, int y);
         virtual ~joueurExpert();
+        virtual void deplace(terrain& terrain) override;
+        virtual void affiche() const override;
 
     protected:
 

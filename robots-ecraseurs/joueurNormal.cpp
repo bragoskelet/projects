@@ -16,7 +16,7 @@ joueurNormal::~joueurNormal()
 }
 
 
-void joueurNormal::deplace(terrain& terrain)
+void joueurNormal::deplace(terrain& terrain) //se déplace dans les 8 directions : verticalement, horizontalement, en diagonale
 {
     bool deplace=false;
 
