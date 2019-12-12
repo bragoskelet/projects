@@ -45,6 +45,10 @@
 		<Unit filename="position.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
+		<Unit filename="robot1G.cpp" />
+		<Unit filename="robot1G.h" />
+		<Unit filename="robot2G.cpp" />
+		<Unit filename="robot2G.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Extensions>

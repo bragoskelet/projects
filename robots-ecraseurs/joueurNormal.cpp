@@ -6,17 +6,13 @@ using std::cout;
 
 
 joueurNormal::joueurNormal(int x, int y): joueur{x,y}
-{
-    //ctor
-}
+{}
 
 joueurNormal::~joueurNormal()
-{
-    //dtor
-}
+{}
 
 
-void joueurNormal::deplace(terrain& terrain) //se déplace dans les 8 directions : verticalement, horizontalement, en diagonale
+void joueurNormal::deplace(terrain& terrain) //Se déplace dans les 3 directions : verticale, horizontale ou diagonale
 {
     bool deplace=false;
 
@@ -123,6 +119,5 @@ void joueurNormal::deplace(terrain& terrain) //se déplace dans les 8 directions 
 }
 
 void joueurNormal::affiche() const
-{
-    cout<<"J";
-}
+{ cout<<"J"; }
+

@@ -2,14 +2,10 @@
 #include "terrain.h"
 
 joueur::joueur(int x, int y): d_pos{x,y}
-{
-    //ctor
-}
+{}
 
 joueur::~joueur()
-{
-    //dtor
-}
+{}
 
 position joueur::pos() const
 {

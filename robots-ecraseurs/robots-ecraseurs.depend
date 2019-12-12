@@ -149,3 +149,64 @@
 1575562615 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.cpp
 	"terrain.h"
 
+1575824300 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\joueur.cpp
+	"joueur.h"
+	"terrain.h"
+
+1575819618 c:\users\selim\onedrive\bureau\robots-ecraseurs\joueur.h
+	<iostream>
+	"position.h"
+
+1575819619 c:\users\selim\onedrive\bureau\robots-ecraseurs\position.h
+
+1575819619 c:\users\selim\onedrive\bureau\robots-ecraseurs\terrain.h
+	<fstream>
+	<vector>
+	"position.h"
+	"joueur.h"
+	"robot.h"
+
+1575823733 c:\users\selim\onedrive\bureau\robots-ecraseurs\robot.h
+	"position.h"
+
+1575824313 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\joueurexpert.cpp
+	"joueurExpert.h"
+	"windows.h"
+	"terrain.h"
+
+1575819618 c:\users\selim\onedrive\bureau\robots-ecraseurs\joueurexpert.h
+	"joueur.h"
+
+1575819619 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\main.cpp
+	<iostream>
+	<cstdlib>
+	"menu.h"
+	"terrain.h"
+	"joueurNormal.h"
+	"windows.h"
+
+1575819619 c:\users\selim\onedrive\bureau\robots-ecraseurs\menu.h
+	<iostream>
+
+1575819619 c:\users\selim\onedrive\bureau\robots-ecraseurs\joueurnormal.h
+	"joueur.h"
+
+1575819619 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\menu.cpp
+	"menu.h"
+	<cstdlib>
+	"windows.h"
+
+1575823733 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\robot.cpp
+	"robot.h"
+
+1575819619 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\terrain.cpp
+	"terrain.h"
+
+1575825164 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\joueurnormal.cpp
+	"joueurNormal.h"
+	"windows.h"
+	"terrain.h"
+
+1575825136 source:c:\users\selim\onedrive\bureau\robots-ecraseurs\position.cpp
+	"position.h"
+

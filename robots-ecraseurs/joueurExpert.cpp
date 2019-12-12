@@ -5,17 +5,13 @@
 using std::cout;
 
 joueurExpert::joueurExpert(int x, int y): joueur{x,y}
-{
-    //ctor
-}
+{}
 
 joueurExpert::~joueurExpert()
-{
-    //dtor
-}
+{}
 
 
-void joueurExpert::deplace(terrain& terrain)  // se déplace uniquement dans 4 directions: haut bas gauche droite
+void joueurExpert::deplace(terrain& terrain)  // Se déplace uniquement dans 4 directions: haut, bas, gauche et droite
 {
     bool deplace=false;
 

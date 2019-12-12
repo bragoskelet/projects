@@ -2,6 +2,8 @@
 #include "doctest.h"
 #include "joueurNormal.h"
 #include "joueurExpert.h"
+#include "robot1G.h"
+#include "robot2G.h"
 
 TEST_CASE("Un joueur fonctionne bien")
 {
@@ -12,7 +14,31 @@ TEST_CASE("Un joueur fonctionne bien")
         REQUIRE_EQ(jn.pos().x(),x);
         REQUIRE_EQ(jn.pos().y(),y);
     }
-
-
 }
 
+
+TEST_CASE("Un robot fonctionne bien")
+{
+    TEST_CASE("Un robot de premiere generation fonctionne bien")
+    {
+        SUBCASE("Le constructeur est correct")
+        {
+            int x=1, y=2;
+            robot1G r{x,y};
+            REQUIRE_EQ(r.pos().x(),x);
+            REQUIRE_EQ(r.pos().y(),y);
+        }
+    }
+
+    TEST_CASE("Un robot de seconde generation fonctionne bien")
+    {
+
+        SUBCASE("Le constructeur est correct")
+        {
+            int x=1, y=2;
+            robot2G r{x,y};
+            REQUIRE_EQ(r.pos().x(),x);
+            REQUIRE_EQ(r.pos().y(),y);
+        }
+    }
+}

@@ -12,7 +12,10 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../robots-ecraseurs" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../robots-ecraseurs" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,6 +51,10 @@
 		<Unit filename="position.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
+		<Unit filename="robot1G.cpp" />
+		<Unit filename="robot1G.h" />
+		<Unit filename="robot2G.cpp" />
+		<Unit filename="robot2G.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Extensions>
