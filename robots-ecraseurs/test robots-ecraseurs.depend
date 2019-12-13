@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1575543924 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueur.cpp
+1576245863 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueur.cpp
 	"joueur.h"
 	"terrain.h"
 
@@ -16,10 +16,10 @@
 	"joueur.h"
 	"robot.h"
 
-1575543925 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.h
+1576245864 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.h
 	"position.h"
 
-1575562216 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurexpert.cpp
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurexpert.cpp
 	"joueurExpert.h"
 	"windows.h"
 	"terrain.h"
@@ -27,7 +27,7 @@
 1575562093 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurexpert.h
 	"joueur.h"
 
-1575562195 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurnormal.cpp
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurnormal.cpp
 	"joueurNormal.h"
 	"windows.h"
 	"terrain.h"
@@ -43,19 +43,21 @@
 1575543925 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\menu.h
 	<iostream>
 
-1575543925 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\position.cpp
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\position.cpp
 	"position.h"
 
-1575543925 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.cpp
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.cpp
 	"robot.h"
 
 1575562615 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.cpp
 	"terrain.h"
 
-1575649439 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\maintest.cpp
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\maintest.cpp
 	"doctest.h"
 	"joueurNormal.h"
 	"joueurExpert.h"
+	"robot1G.h"
+	"robot2G.h"
 
 1575647919 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\doctest.h
 	<iosfwd>
@@ -269,4 +271,20 @@
 
 1575824256 c:\users\selim\onedrive\bureau\robots-ecraseurs\robot2g.h
 	"robot.h"
+
+1576245864 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot1g.h
+	"robot.h"
+
+1576245865 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.h
+	"robot.h"
+
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot1g.cpp
+	"robot1G.h"
+	"terrain.h"
+	"windows.h"
+
+1576245864 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.cpp
+	"robot2G.h"
+	"terrain.h"
+	"windows.h"
 

@@ -21,7 +21,7 @@ void testOperator()
 
 void testCoord()
 {
-    terrain t{4,54};
+    terrain t{4,6};
     joueurNormal j{1,2};
     t[1][2]=JOUEUR;
     t.affiche();

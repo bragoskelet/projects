@@ -1,5 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
+
 #include "joueurNormal.h"
 #include "joueurExpert.h"
 #include "robot1G.h"
@@ -19,7 +20,7 @@ TEST_CASE("Un joueur fonctionne bien")
 
 TEST_CASE("Un robot fonctionne bien")
 {
-    TEST_CASE("Un robot de premiere generation fonctionne bien")
+    SUBCASE("Un robot de premiere generation fonctionne bien")
     {
         SUBCASE("Le constructeur est correct")
         {
@@ -30,9 +31,8 @@ TEST_CASE("Un robot fonctionne bien")
         }
     }
 
-    TEST_CASE("Un robot de seconde generation fonctionne bien")
+    SUBCASE("Un robot de seconde generation fonctionne bien")
     {
-
         SUBCASE("Le constructeur est correct")
         {
             int x=1, y=2;
