@@ -34,3 +34,8 @@ void position::decale(int dx, int dy)
     d_x+=dx;
     d_y+=dy;
 }
+
+bool position::operator==(const position& pos) const
+{
+    return (d_x==pos.x() && d_y==pos.y());
+}

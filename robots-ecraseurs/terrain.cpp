@@ -44,7 +44,6 @@ void terrain::charge()
 
 }
 
-
 vector<int>& terrain::operator[](int i)
 {
     return d_grille[i];
@@ -65,4 +64,20 @@ int terrain::operator()(int i, int j) const
     return d_grille[i][j];
 }
 
+joueur* terrain::djoueur() const
+{
+    return d_joueur;
+}
 
+void terrain::joueurEcrase()
+{
+    d_joueur->estEcrase();
+}
+
+void terrain::detruitRobots(const position& pos)
+{
+    for(int i=0; i<d_robots.size(); ++i)
+    {
+        if(d_robots[i]->pos()==pos) d_robots[i]->collision();
+    }
+}

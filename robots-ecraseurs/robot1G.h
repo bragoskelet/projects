@@ -16,7 +16,7 @@ class robot1G : public robot
     protected:
 
     private:
-        position d_pos;
+
 };
 
 #endif // ROBOT1G_H

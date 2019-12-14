@@ -4,17 +4,17 @@
 #include <fstream>
 #include <vector>
 #include "position.h"
-#include "joueur.h"
 #include "robot.h"
+#include "joueur.h"
+
 
 using std::vector;
 using std::string;
 
-enum c{VIDE,DEBRIS,JOUEUR,ROBOT};
+enum dalle{VIDE,DEBRIS,JOUEUR,ROBOT};
 
 class terrain
 {
-
     public:
         terrain(int largeur, int hauteur);
         virtual ~terrain();
@@ -24,13 +24,15 @@ class terrain
         void sauve() const;
         void charge();
 
+        joueur* djoueur() const; // nom de méthode différent de nom de class (joueur)
         vector<int>& operator[](int i);
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
         int operator()(int i, int j) const;
 
+        void joueurEcrase();
+        void detruitRobots(const position& pos);
 
-    protected:
 
     private:
         int d_largeur; //nb colonnes, le x ou i
@@ -38,7 +40,6 @@ class terrain
         vector<vector<int>> d_grille;
         joueur* d_joueur;
         vector<robot*> d_robots;
-
 
 };
 
