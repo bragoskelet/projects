@@ -5,6 +5,7 @@
 #include "joueurExpert.h"
 #include "robot1G.h"
 #include "robot2G.h"
+#include "terrain.h"
 
 TEST_CASE("Un joueur fonctionne bien")
 {
