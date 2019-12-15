@@ -21,10 +21,10 @@ class terrain
         int hauteur();
         int largeur();
         void affiche() const;
-        void sauve() const;
-        void charge();
+        void sauve(string &fname) const;
+        void charge(const string & fname);
 
-        joueur* djoueur() const; // nom de méthode différent de nom de class (joueur)
+        joueur* djoueur() const; // nom de mÃ©thode diffÃ©rent de nom de class (joueur)
         vector<int>& operator[](int i);
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
