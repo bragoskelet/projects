@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <vector>
+#include <string>
 #include "position.h"
 #include "robot.h"
 #include "joueur.h"
