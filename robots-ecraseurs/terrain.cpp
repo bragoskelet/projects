@@ -34,14 +34,23 @@ void terrain::affiche() const
     }
 }
 
-void terrain::sauve() const
+void terrain::sauve(const string &fname) const
 {
 
 }
 
-void terrain::charge()
+void terrain::charge(const string &fname)
 {
-
+    istream f(fname);
+    if(!f)
+    {
+        cout<<"erreur le fichier n'existe pas ";
+        return;
+    }
+    else
+    {
+        int larg,hauteur;
+    }
 }
 
 vector<int>& terrain::operator[](int i)
