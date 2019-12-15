@@ -1,3 +1,6 @@
+#include <iostream>
+#include <fstream>
+#include <string>
 #include "terrain.h"
 
 using std::cout;
@@ -34,7 +37,7 @@ void terrain::affiche() const
     }
 }
 
-void terrain::sauve(const string &fname) const
+void terrain::sauve(string &fname) const
 {
 
 }
@@ -42,14 +45,23 @@ void terrain::sauve(const string &fname) const
 void terrain::charge(const string &fname)
 {
     istream f(fname);
-    if(!f)
+    if(!f.is_open())
     {
         cout<<"erreur le fichier n'existe pas ";
         return;
     }
     else
     {
-        int larg,hauteur;
+        int larg,haut;
+        f>>larg>>haut;
+        for(int i=0; i<larg; i++)
+        {
+            d_grille[i].resize(haut);
+            for(int j=0; j<hauteur; j++) 
+            {
+                f>>d_grille[i][j];
+            }
+        }
     }
 }
 
