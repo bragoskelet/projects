@@ -39,7 +39,24 @@ void terrain::affiche() const
 
 void terrain::sauve(string &fname) const
 {
-
+    ofstream f (fname);
+    if (!f.is_open())
+    {
+        cout << "erreur le fichier n'existe pas! Impossible d'ecrire!" << endl;
+    }
+    else
+    {
+        f << d_largeur << " " << d_hauteur <<endl;
+        for(int i=0; i<d_largeur; i++)
+        {
+            for(int j=0; j<d_hauteur; j++) 
+            {
+                f<<d_grille[i][j]<<" ";
+            }
+            f<<endl;
+        }
+    }
+    f.close()
 }
 
 void terrain::charge(const string &fname)
@@ -47,22 +64,25 @@ void terrain::charge(const string &fname)
     istream f(fname);
     if(!f.is_open())
     {
-        cout<<"erreur le fichier n'existe pas ";
+        cout<<"erreur le fichier n'existe pas! Impossible de le lire "<<endl;
         return;
     }
     else
     {
         int larg,haut;
         f>>larg>>haut;
+        d_largeur=larg;
+        d_hauteur=haut;
         for(int i=0; i<larg; i++)
         {
             d_grille[i].resize(haut);
-            for(int j=0; j<hauteur; j++) 
+            for(int j=0; j<haut; j++) 
             {
                 f>>d_grille[i][j];
             }
         }
     }
+    f.close();
 }
 
 vector<int>& terrain::operator[](int i)
