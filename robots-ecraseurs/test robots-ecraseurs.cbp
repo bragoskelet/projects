@@ -37,6 +37,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="debris.cpp" />
+		<Unit filename="debris.h" />
 		<Unit filename="doctest.h" />
 		<Unit filename="joueur.cpp" />
 		<Unit filename="joueur.h" />
