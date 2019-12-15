@@ -11,7 +11,6 @@ joueurNormal::joueurNormal(int x, int y): joueur{x,y}
 joueurNormal::~joueurNormal()
 {}
 
-
 void joueurNormal::deplace(terrain& terrain) //Se déplace dans les 3 directions : verticale, horizontale ou diagonale
 {
     bool deplace=false;

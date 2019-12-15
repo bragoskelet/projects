@@ -8,10 +8,11 @@ class terrain;
 class robot
 {
     public:
-        robot();
         robot(int x, int y);
         virtual ~robot();
 
+        bool detruit() const;
+        void collision();
         position pos() const;
         void modifie(int x, int y);
         void decale(int dx, int dy);
@@ -23,6 +24,7 @@ class robot
 
     private:
         position d_pos;
+        bool d_detruit;
 };
 
 #endif // ROBOT_H

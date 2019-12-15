@@ -3,9 +3,6 @@
 #include "windows.h"
 
 
-robot1G::robot1G()
-{}
-
 robot1G::robot1G(int x, int y)
     :robot{x,y}
 {}

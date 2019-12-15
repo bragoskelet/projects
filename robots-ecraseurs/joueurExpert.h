@@ -14,6 +14,7 @@ class joueurExpert: public joueur
     protected:
 
     private:
+
 };
 
 #endif // JOUEUREXPERT_H

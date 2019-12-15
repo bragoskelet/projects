@@ -13,6 +13,7 @@ class position
         void modifie(int x, int y);
         void modifie(const position &pos);
         void decale(int dx, int dy);
+        bool operator==(const position& pos) const;
 
     protected:
 
