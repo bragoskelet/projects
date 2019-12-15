@@ -22,7 +22,7 @@ class terrain
         int hauteur();
         int largeur();
         void affiche() const;
-        void sauve(string &fname) const;
+        void sauve(string & fname) const;
         void charge(const string & fname);
 
         joueur* djoueur() const; // nom de méthode différent de nom de class (joueur)
