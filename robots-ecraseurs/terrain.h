@@ -7,12 +7,15 @@
 #include "position.h"
 #include "robot.h"
 #include "joueur.h"
+#include "debris.h"
 
 
 using std::vector;
 using std::string;
 
 enum dalle{VIDE,DEBRIS,JOUEUR,ROBOT};
+enum type_joueur{NORMAL,EXPERT};
+enum type_robot{UN_G,DEUX_G};
 
 class terrain
 {
@@ -22,10 +25,14 @@ class terrain
         int hauteur();
         int largeur();
         void affiche() const;
+        void creeJoueur(int type, int x, int y);
+        void creeRobot(int type, int x, int y);
+        void creeDebris(int x, int y);
+
         void sauve(string & fname) const;
         void charge(const string & fname);
 
-        joueur* djoueur() const; // nom de méthode différent de nom de class (joueur)
+        const joueur* djoueur() const; // nom de méthode différent de nom de class (joueur) sinon bug
         vector<int>& operator[](int i);
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
@@ -41,6 +48,10 @@ class terrain
         vector<vector<int>> d_grille;
         joueur* d_joueur;
         vector<robot*> d_robots;
+        vector<debris> d_debris;
+
+        void initGrille();
+        void remplitGrille();
 
 };
 

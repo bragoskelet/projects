@@ -58,7 +58,7 @@ int main()
     menu m{};
     //m.affiche();
     //testOperator();
-    testCoord();
+    //testCoord();
     //testRobot();
 }
 

@@ -98,12 +98,14 @@
 
 1576328607 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\position.h
 
-1576338016 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.h
+1576440472 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.h
 	<fstream>
 	<vector>
+	<string>
 	"position.h"
 	"robot.h"
 	"joueur.h"
+	"debris.h"
 
 1576326694 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.h
 	"position.h"
@@ -124,12 +126,13 @@
 1576326541 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurnormal.h
 	"joueur.h"
 
-1576247514 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\main.cpp
+1576440425 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\main.cpp
 	<iostream>
 	<cstdlib>
 	"menu.h"
 	"terrain.h"
 	"joueurNormal.h"
+	"robot2G.h"
 	"windows.h"
 
 1575543925 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\menu.h
@@ -226,4 +229,10 @@
 
 1576337293 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.h
 	"robot.h"
+
+1576440452 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\debris.cpp
+	"debris.h"
+
+1576439669 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\debris.h
+	"position.h"
 

@@ -18,9 +18,9 @@ TEST_CASE("Un joueur fonctionne bien")
     }
 }
 
-TEST_CASE("un terrain fonction bien")
+TEST_CASE("un terrain fonctionne bien")
 {
-    SUBCASE("Le constructeur par defaut est correct")
+    /*SUBCASE("Le constructeur par defaut est correct")
     {
         int x=0,l=4,h=4;
         terrain t(l,h);
@@ -32,6 +32,7 @@ TEST_CASE("un terrain fonction bien")
             }
         }
     }
+    */
 }
 
 TEST_CASE("Un robot fonctionne bien")
