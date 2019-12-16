@@ -37,6 +37,8 @@ class terrain
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
         int operator()(int i, int j) const;
+        int& operator()(position& p);
+        int operator()(position p) const;
 
         void joueurEcrase();
         void detruitRobots(const position& pos);

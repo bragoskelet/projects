@@ -169,6 +169,16 @@ int terrain::operator()(int i, int j) const
     return d_grille[i][j];
 }
 
+int& terrain::operator()(position& p)
+{
+    return d_grille[p.x()][p.y()];
+}
+
+int terrain::operator()(position p) const
+{
+    return d_grille[p.x()][p.y()];
+}
+
 const joueur* terrain::djoueur() const
 {
     return d_joueur;
