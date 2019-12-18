@@ -9,7 +9,7 @@
 
 1576328607 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\position.h
 
-1576440472 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.h
+1576679888 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.h
 	<fstream>
 	<vector>
 	<string>
@@ -18,7 +18,7 @@
 	"joueur.h"
 	"debris.h"
 
-1576326694 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.h
+1576677373 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.h
 	"position.h"
 
 1576326543 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurexpert.cpp
@@ -37,7 +37,7 @@
 1576326541 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\joueurnormal.h
 	"joueur.h"
 
-1575543925 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\menu.cpp
+1576677262 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\menu.cpp
 	"menu.h"
 	<cstdlib>
 	"windows.h"
@@ -48,10 +48,11 @@
 1576328607 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\position.cpp
 	"position.h"
 
-1576326694 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.cpp
+1576679921 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot.cpp
 	"robot.h"
+	"terrain.h"
 
-1576440807 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.cpp
+1576679888 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\terrain.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -287,12 +288,13 @@
 1576337293 c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.h
 	"robot.h"
 
-1576329037 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot1g.cpp
+1576679952 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot1g.cpp
 	"robot1G.h"
 	"terrain.h"
 	"windows.h"
+	<cmath>
 
-1576337594 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.cpp
+1576677620 source:c:\users\luca\desktop\luca\github\projects\robots-ecraseurs\robot2g.cpp
 	"robot2G.h"
 	"terrain.h"
 	"windows.h"

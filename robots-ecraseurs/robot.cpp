@@ -1,4 +1,5 @@
 #include "robot.h"
+#include "terrain.h"
 
 robot::robot(int x, int y): d_pos{x,y}
 {}

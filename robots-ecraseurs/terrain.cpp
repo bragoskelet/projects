@@ -7,9 +7,12 @@
 #include "robot1G.h"
 #include "robot2G.h"
 
-
 using std::cout;
 using std::endl;
+using std::cin;
+
+terrain::terrain(): d_largeur{0}, d_hauteur{0}, d_grille(), d_joueur{nullptr}, d_robots(), d_debris()
+{}
 
 terrain::terrain(int largeur, int hauteur):
     d_largeur{largeur}, d_hauteur{hauteur}, d_grille(), d_joueur{nullptr}, d_robots(), d_debris()
@@ -18,7 +21,14 @@ terrain::terrain(int largeur, int hauteur):
 }
 
 terrain::~terrain()
-{}
+{
+    delete d_joueur;
+    for(int i=0; i<d_robots.size(); ++i)
+    {
+        delete d_robots[i];
+    }
+    d_robots.clear();
+}
 
 int terrain::hauteur()
 {
@@ -34,7 +44,14 @@ void terrain::affiche() const
 {
     for(int i=0; i<d_hauteur; ++i)
     {
-        for(int j=0; j<d_largeur; ++j) cout<<d_grille[j][i]<<" ";
+        for(int j=0; j<d_largeur; ++j)
+        {
+            //cout<<d_grille[j][i]<<" ";
+            if(d_grille[j][i]==dalle::VIDE) cout<<d_grille[j][i]<<" ";
+            else if(d_grille[j][i]==dalle::ROBOT) cout<<"R ";
+            else if(d_grille[j][i]==dalle::JOUEUR) cout<<"J ";
+            else cout<<"X ";
+        }
         cout<<endl;
     }
 }
@@ -114,8 +131,8 @@ void terrain::charge(const string &fname) //charge dans les données et non la gr
     if(!f.is_open())
     {
         cout<<"Erreur le fichier n'existe pas! Impossible de le lire "<<endl;
-        return;
     }
+
     else
     {
         //on suppose pour l'instant que la lecture se passe bien
@@ -139,7 +156,7 @@ void terrain::charge(const string &fname) //charge dans les données et non la gr
         f>>nb_objets; //ici nb de debris
         for(int i=0; i<nb_objets; ++i)
         {
-            f>>x,y;
+            f>>x>>y;
             creeDebris(x,y);
         }
 
@@ -168,6 +185,7 @@ int terrain::operator()(int i, int j) const
 {
     return d_grille[i][j];
 }
+
 
 //accès avec pos
 int& terrain::operator[](const position& p)
@@ -198,15 +216,52 @@ void terrain::detruitRobots(const position& pos)
     }
 }
 
-void terrain::deplace()
+bool terrain::tousRobotsDetruits() const
 {
-    while(d_joueur->pos().x()!=0 || d_joueur->pos().y()!=0)
+    bool tousDetruits=true;
+    int i=0;
+    while(i<d_robots.size() && tousDetruits)
+    {
+        if(!d_robots[i]->detruit()) tousDetruits=false;
+        ++i;
+    }
+
+    return tousDetruits;
+}
+
+void terrain::TEST_deplacements()
+{
+    while(!d_joueur->estMort())
     {
         d_joueur->deplace(*this);
         system("cls");
         affiche();
+        int x,y;
+        x=d_robots[0]->pos().x();
+        y=d_robots[0]->pos().y();
         d_robots[0]->deplace(*this);
         system("cls");
         affiche();
+
+        cout<<"Pos robot avant "<<x<<","<<y<<endl;
+        cout<<"Pos robot apres "<<d_robots[0]->pos().x()<<","<<d_robots[0]->pos().y()<<endl;
+    }
+}
+
+void terrain::deplacements()
+{
+    affiche();
+    while(!d_joueur->estMort() && !tousRobotsDetruits())
+    {
+        d_joueur->deplace(*this);
+        system("cls");
+        affiche();
+        for(int i=0; i<d_robots.size(); ++i)
+        {
+            if(!d_robots[i]->detruit()) d_robots[i]->deplace(*this);
+            system("cls");
+            affiche();
+        }
+
     }
 }

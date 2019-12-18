@@ -20,6 +20,7 @@ enum type_robot{UN_G,DEUX_G};
 class terrain
 {
     public:
+        terrain();
         terrain(int largeur, int hauteur);
         virtual ~terrain();
         int hauteur();
@@ -39,11 +40,13 @@ class terrain
         int operator()(int i, int j) const;
 
         int& operator[](const position& p);
-        int operator[](const position& p) const
+        int operator[](const position& p) const;
 
         void joueurEcrase();
         void detruitRobots(const position& pos);
-        void deplace();
+        bool tousRobotsDetruits() const;
+        void TEST_deplacements();
+        void deplacements();
 
 		void remplitGrille();
     private:

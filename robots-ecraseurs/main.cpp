@@ -6,6 +6,8 @@
 #include "robot2G.h"
 #include "windows.h"
 
+#include "graphics.h"
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -37,11 +39,19 @@ void testCoord()
 void testRobot()
 {
     terrain t{4,6};
-    t.creeJoueur(0,1,2);
-    t.creeRobot(1,3,3);
+    t.creeJoueur(type_joueur::NORMAL,1,2);
+    t.creeRobot(type_robot::UN_G,3,3);
     t.remplitGrille();
-    t.affiche();
-    t.deplace();
+    t.deplacements();
+}
+
+void testJeu()
+{
+    terrain t{};
+    t.charge("terrains/terrain1.txt");
+    t.deplacements();
+    cout<<"Fin";
+    getch();
 }
 
 int main()
@@ -50,6 +60,7 @@ int main()
     //m.affiche();
     //testOperator();
     //testCoord();
-    testRobot();
+    //testRobot();
+    testJeu();
 }
 

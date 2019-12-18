@@ -18,13 +18,13 @@ void robot2G::deplace(terrain& terrain) // Se déplace horizontalement, verticale
     //déplacement
     if(dx!=0 && dy!=0) //alors il faut se deplacer en X et en Y (en diagonale)
     {
-        decale(dx/fabs(dx),dy/fabs(dy));
+        decale(-dx/fabs(dx),-dy/fabs(dy));
     }
 
     else //deplacement soit horizontal soit vertical
     {
-        if(dx==0) decale(0,dy/fabs(dy)); //on ne deplace que d'une case, et /fabs(y) conserve le signe de dy: pour haut ou bas.
-        else decale(dx/fabs(dx),0);     // idem pour dx, la division vaut 1 ou -1.
+        if(dx==0) decale(0,-dy/fabs(dy)); //on ne deplace que d'une case, et /fabs(y) conserve le signe de dy: pour haut ou bas.
+        else decale(-dx/fabs(dx),0);     // idem pour dx, la division vaut 1 ou -1.
     }
 
     //traitement de la case

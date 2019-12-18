@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="debris.cpp" />
 		<Unit filename="debris.h" />
+		<Unit filename="graphics.h" />
 		<Unit filename="joueur.cpp" />
 		<Unit filename="joueur.h" />
 		<Unit filename="joueurExpert.cpp" />
@@ -53,6 +54,7 @@
 		<Unit filename="robot2G.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
+		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
