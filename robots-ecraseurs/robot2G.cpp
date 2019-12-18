@@ -28,21 +28,7 @@ void robot2G::deplace(terrain& terrain) // Se déplace horizontalement, verticale
     }
 
     //traitement de la case
-    if(terrain[pos().x()][pos().y()]==dalle::VIDE) terrain[pos().x()][pos().y()]=dalle::ROBOT;
-
-    else if(terrain[pos().x()][pos().y()]==dalle::JOUEUR)
-    {
-        terrain.joueurEcrase();
-        terrain[pos().x()][pos().y()]=dalle::ROBOT;
-    }
-
-    else if(terrain[pos().x()][pos().y()]==dalle::DEBRIS) collision();
-
-    else //2 robots sur la même case
-    {
-        terrain[pos().x()][pos().y()]=dalle::DEBRIS;
-        terrain.detruitRobots(pos());
-    }
+    arriveSur(terrain);
 }
 
 void robot2G::affiche() const

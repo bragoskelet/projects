@@ -16,7 +16,8 @@ class robot
         position pos() const;
         void modifie(int x, int y);
         void decale(int dx, int dy);
-
+		void arriveSur(terrain& terrain);
+		
         virtual void deplace(terrain& terrain) = 0;
         virtual void affiche() const = 0 ;
 

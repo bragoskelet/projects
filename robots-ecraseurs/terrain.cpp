@@ -169,6 +169,17 @@ int terrain::operator()(int i, int j) const
     return d_grille[i][j];
 }
 
+//accès avec pos
+int& terrain::operator[](const position& p)
+{
+    return d_grille[p.x()][p.y()];
+}
+//accès avec pos
+int terrain::operator[](const position& p) const
+{
+    return d_grille[p.x()][p.y()];
+}
+
 const joueur* terrain::djoueur() const
 {
     return d_joueur;
@@ -184,5 +195,18 @@ void terrain::detruitRobots(const position& pos)
     for(int i=0; i<d_robots.size(); ++i)
     {
         if(d_robots[i]->pos()==pos) d_robots[i]->collision();
+    }
+}
+
+void terrain::deplace()
+{
+    while(d_joueur->pos().x()!=0 || d_joueur->pos().y()!=0)
+    {
+        d_joueur->deplace(*this);
+        system("cls");
+        affiche();
+        d_robots[0]->deplace(*this);
+        system("cls");
+        affiche();
     }
 }

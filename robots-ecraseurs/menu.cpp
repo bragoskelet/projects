@@ -84,10 +84,10 @@ void menu::affiche()
     afficheTitre();
 
     for(int i=0; i<46; ++i) cout<<" ";
-    cout<<"(1)Jouer\n\n\n";
+    cout<<"(1) Jouer\n\n\n";
 
     for(int i=0; i<45; ++i) cout<<" ";
-    cout<<"(2)Quitter\n\n\n";
+    cout<<"(2) Quitter\n\n\n";
 
     int choix=-1;
 

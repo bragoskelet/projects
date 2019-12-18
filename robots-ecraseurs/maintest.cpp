@@ -20,19 +20,22 @@ TEST_CASE("Un joueur fonctionne bien")
 
 TEST_CASE("un terrain fonctionne bien")
 {
-    /*SUBCASE("Le constructeur par defaut est correct")
+    SUBCASE("Le constructeur par defaut est correct")
     {
-        int x=0,l=4,h=4;
-        terrain t(l,h);
+        int l=4,h=4;
+        terrain t{l,h};
+        REQUIRE_EQ(t.largeur(),l);
+        REQUIRE_EQ(t.hauteur(),h);
+        
         for(int i=0;i<l;i++)
         {
             for (int j=0;j<h;j++)
             {
-                REQUIRE_EQ(t(i,j),x);
+                REQUIRE_EQ(t[i][j],dalle::VIDE);
             }
         }
     }
-    */
+    
 }
 
 TEST_CASE("Un robot fonctionne bien")

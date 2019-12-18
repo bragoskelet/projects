@@ -37,11 +37,14 @@ class terrain
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
         int operator()(int i, int j) const;
+        int& operator[](const position& p);
+        int operator[](const position& p) const
 
         void joueurEcrase();
         void detruitRobots(const position& pos);
+        void deplace();
 
-
+		void remplitGrille();
     private:
         int d_largeur; //nb colonnes, le x ou i
         int d_hauteur; //nb lignes, le y ou j
@@ -51,7 +54,7 @@ class terrain
         vector<debris> d_debris;
 
         void initGrille();
-        void remplitGrille();
+        
 
 };
 

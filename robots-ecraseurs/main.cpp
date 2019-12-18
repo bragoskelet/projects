@@ -35,22 +35,13 @@ void testCoord()
 }
 
 void testRobot()
-{/*
+{
     terrain t{4,6};
-    joueurNormal j{1,2};
-    robot2G r{4,4};
-    t[1][2]=JOUEUR;
-    t[4][4]=dalle::ROBOT;
+    t.creeJoueur(0,1,2);
+    t.creeRobot(1,3,3);
+    t.remplitGrille();
     t.affiche();
-    while(j.pos().x()!=0 || j.pos().y()!=0)
-    {
-        j.deplace(t);
-        system("cls");
-        t.affiche();
-        r.deplace(t);
-        system("cls");
-        t.affiche();
-    }*/
+    t.deplace();
 }
 
 int main()
@@ -59,6 +50,6 @@ int main()
     //m.affiche();
     //testOperator();
     //testCoord();
-    //testRobot();
+    testRobot();
 }
 
