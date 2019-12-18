@@ -37,13 +37,9 @@ class terrain
         vector<int> operator[](int i)const;
         int& operator()(int i, int j);
         int operator()(int i, int j) const;
-<<<<<<< HEAD
+
         int& operator[](const position& p);
         int operator[](const position& p) const
-=======
-        int& operator()(position& p);
-        int operator()(position p) const;
->>>>>>> dc1938565bb4eddca51e98fb9304471eb9167d1e
 
         void joueurEcrase();
         void detruitRobots(const position& pos);
@@ -59,7 +55,7 @@ class terrain
         vector<debris> d_debris;
 
         void initGrille();
-        
+
 
 };
 

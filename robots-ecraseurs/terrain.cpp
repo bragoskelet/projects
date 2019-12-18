@@ -169,7 +169,6 @@ int terrain::operator()(int i, int j) const
     return d_grille[i][j];
 }
 
-<<<<<<< HEAD
 //accès avec pos
 int& terrain::operator[](const position& p)
 {
@@ -177,14 +176,6 @@ int& terrain::operator[](const position& p)
 }
 //accès avec pos
 int terrain::operator[](const position& p) const
-=======
-int& terrain::operator()(position& p)
-{
-    return d_grille[p.x()][p.y()];
-}
-
-int terrain::operator()(position p) const
->>>>>>> dc1938565bb4eddca51e98fb9304471eb9167d1e
 {
     return d_grille[p.x()][p.y()];
 }
