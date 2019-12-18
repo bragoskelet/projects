@@ -23,15 +23,25 @@ TEST_CASE("un terrain fonctionne bien")
     SUBCASE("Le constructeur par defaut est correct")
     {
         int l=4,h=4;
+<<<<<<< HEAD
         terrain t{l,h};
         REQUIRE_EQ(t.largeur(),l);
         REQUIRE_EQ(t.hauteur(),h);
         
+=======
+        terrain t(l,h);
+        REQUIRE_EQ(t.largeur(),l);
+        REQUIRE_EQ(t.hauteur(),h);
+>>>>>>> dc1938565bb4eddca51e98fb9304471eb9167d1e
         for(int i=0;i<l;i++)
         {
             for (int j=0;j<h;j++)
             {
+<<<<<<< HEAD
                 REQUIRE_EQ(t[i][j],dalle::VIDE);
+=======
+                REQUIRE_EQ(t(i,j),dalle::VIDE);
+>>>>>>> dc1938565bb4eddca51e98fb9304471eb9167d1e
             }
         }
     }
