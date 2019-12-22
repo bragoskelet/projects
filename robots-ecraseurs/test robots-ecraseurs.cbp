@@ -40,6 +40,8 @@
 		<Unit filename="debris.cpp" />
 		<Unit filename="debris.h" />
 		<Unit filename="doctest.h" />
+		<Unit filename="editeurTerrain.cpp" />
+		<Unit filename="editeurTerrain.h" />
 		<Unit filename="joueur.cpp" />
 		<Unit filename="joueur.h" />
 		<Unit filename="joueurExpert.cpp" />

@@ -111,13 +111,14 @@ void terrain::remplitGrille()
     for(int i=0; i<d_debris.size(); ++i) d_grille[d_debris[i].pos().x()][d_debris[i].pos().y()]=dalle::DEBRIS;
 }
 
+/*
 void terrain::sauve(string &fname) const
 {
     std::ofstream f (fname);
     //créer nv fichier
 
     f.close();
-}
+}*/
 
 void terrain::charge(const string &fname) //charge dans les données et non la grille
 {
@@ -262,6 +263,5 @@ void terrain::deplacements()
             system("cls");
             affiche();
         }
-
     }
 }

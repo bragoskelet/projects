@@ -30,7 +30,7 @@ class terrain
         void creeRobot(int type, int x, int y);
         void creeDebris(int x, int y);
 
-        void sauve(string & fname) const;
+        //void sauve(string & fname) const;
         void charge(const string & fname);
 
         const joueur* djoueur() const; // nom de méthode différent de nom de class (joueur) sinon bug

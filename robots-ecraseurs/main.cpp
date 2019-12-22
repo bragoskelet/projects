@@ -5,6 +5,7 @@
 #include "joueurNormal.h"
 #include "robot2G.h"
 #include "windows.h"
+#include "editeurTerrain.h"
 
 #include "graphics.h"
 
@@ -54,6 +55,13 @@ void testJeu()
     getch();
 }
 
+void testEditeur()
+{
+    editeurTerrain edt{};
+    edt.editeur();
+
+}
+
 int main()
 {
     menu m{};
@@ -62,5 +70,6 @@ int main()
     //testCoord();
     //testRobot();
     testJeu();
+    //testEditeur();
 }
 

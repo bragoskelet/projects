@@ -7,20 +7,24 @@ using std::vector;
 
 class editeurTerrain
 {
-    const int VIDE=0;
-    const int DEBRIS=1;
-    const int JOUEURNORMAL=21;
-    const int JOUEUREXPERT=22;
-    const int ROBOT1G=31;
-    const int ROBOT2G=32;
+    enum types{VIDE,DEBRIS,JOUEUR_NORMAL,JOUEUR_EXPERT,ROBOT_1G,ROBOT_2G};
+    const int NB_TYPES=6;
+
     public:
+        editeurTerrain();
         editeurTerrain(int largeur,int hauteur);
-        void initialiserTerrain();
-        void affichageEditeur();
-        void editeur(int largeur, int hauteur);
+        void initialiseTerrain();
+        void afficheGrille() const;
+        void afficheChoix() const;
+        void affichePosition() const;
+        void sauve() const;
+        void editeur();
     private:
-        vector <vector<int> > d_terrain;
-        int d_largeur,d_hauteur;
+        int d_largeur, d_hauteur;
+        vector<vector<int>> d_grille;
+
 };
+
+void cursor(int l, int c);
 
 #endif // EDITEURTERRAIN_H

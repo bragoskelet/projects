@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="debris.cpp" />
 		<Unit filename="debris.h" />
+		<Unit filename="editeurTerrain.cpp" />
+		<Unit filename="editeurTerrain.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="joueur.cpp" />
 		<Unit filename="joueur.h" />
